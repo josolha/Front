@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>onload로 이미지 크기 출력</title>
+
+</head>
+<body onload="changeImage()">
+<h3>onload로 이미지 크기 출력</h3>
+<hr>
+<form>
+<select id="sel" onchange="changeImage()"> <!-- onchange는 select의 값이 선택시에 발생 이벤트리스너  -->
+	<option value="media/apple.png">사과
+	<option value="media/banana.png">바나나
+	<option value="media/mango.png">망고
+</select>
+<span id="mySpan">이미지 크기</span>
+</form>
+<p><img id="myImg" src="media/apple.png" alt="."></p>
+</body>
+<script>
+function changeImage() {
+	var sel = document.getElementById("sel");
+	var img = document.getElementById("myImg");
+	img.onload = function () {  // 이미지 크기 출력 //함수 이름으로 작성 않고 익명의 함수로 바로 처리
+		 var mySpan = document.getElementById("mySpan");
+		mySpan.innerHTML = img.width + "x" + img.height;
+	}
+	var index= sel.selectedIndex; // 선택된 옵션 인덱스
+	img.src = sel.options[index].value; // <option>의 value 속성
+}
+</script>
+</html>

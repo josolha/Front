@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function randomInt(){
+		return Math.floor(Math.random()*9)+1;
+	}
+</script>
+</head>
+<body>
+<body>
+<h3>Math를 활용한 구구단 연습</h3>
+<hr>
+<script>
+	let question = randomInt() + "*"+ randomInt();
+	let user = prompt(question + "답은 무었입니까", 0);
+	if(user == null){
+		document.write("구구단을 종료합니다")
+	}
+	else{
+		let answer = eval(question);
+		if(user == answer){
+			document.write("정답입니다.");	
+		}
+		else{
+			document.write("틀렸습니다 정답은 = "+ answer);
+		}
+	}
+
+</script>
+
+</body>
+</html>

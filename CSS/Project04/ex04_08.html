@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>selector test</title>
+
+<style>
+h3,li { /* 여러 설렉터를 선택시, 로 구분  */
+	
+	color:brown;
+	
+}
+body.main{ /*body태그에 있는 class= "main" 을 선택 */
+	background : acliceblue;
+}
+.warning{ /* class = "warning" 엘리먼트 선택  */
+	color : red;
+}
+#list{
+	background : mistyrose;
+}
+
+div > div > strong{ /* > 는 자식 관계의 엘리먼트 선택 (자식이란 바로 안에 란 뜻) */
+	background : yellow;
+}
+ul strong{ /* ul의 후손(자식 포함) */
+	color : dodgerblue;
+}
+
+ul + div{ /*  */
+	font-size : 25px;
+}
+input[type="text"]{
+	background-color : #888888;
+}
+a[target="_blank"]{
+	color : red;
+}
+
+h3:first-letter { /* :유사클래스 */
+	color : red;
+}
+li:hover{ /* 마우스를 갖다대는 유사 클래스 */
+	background:yellowgreen;
+}
+
+</style>
+</head>
+<body class = "main">
+
+<h3>Web Programming</h3>
+<hr/>
+
+<div>
+	<div>2학기<strong>학습 내용</strong>입니다.</div>
+	<ul id = "list">
+		<li>HTML5</li>
+		<li><strong>CSS</strong></li>
+		<li>JAVASCRIPT</li>
+	</ul>
+	<div class = "warning">60점 이하는 F!</div>
+</div>
+
+<input type = "text" name ="name" placeholder = "입력하세요"><br/>
+<a href ="https://www.naver.com" target="_blank">링크</a>
+
+</body>
+</html>

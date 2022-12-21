@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>CSS SELECTOR를 이용한 DOM 찾기</title>
+</head>
+<body>
+
+<h1>A H1 element</h1>
+<h2>A H2 element</h2>
+<h3>A H3 element</h3>
+<div>A DIV element</div>
+<p>A p element</p>
+<p>A p element with a <span style = "color:brown;">span</span>element inside</p>
+
+<a href = "https://www.w3schools.com">w3school.com</a>
+<a href = "https://www.disney.com" target="_blank">disney.com</a>
+<a href = "https://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+
+<script>
+//const도 let 처럼 ES6부터 사용하는 변수 선언 키워드(값 변경이 객체형외는 안되어 객체형 변수에 많이 사용)
+const nodeList = document.querySelectorAll("h3,div,span");
+//quertSelectorAll(css selector문)은 컬렉션(배열)을 반환 (css의 셀렉터문을 사용하므로 선택 폭이 넓음)
+for (let i = 0; i < nodeList.length; i++) {
+	nodeList[i].style.backgroundColor = "red";
+}
+let aList = document.querySelectorAll("a[target]");
+//시작 태그 a이고 target속성이 있는 엘리먼트를 선택
+for (let i = 0; i < aList.length; i++) {
+	aList[i].style.border = "10px solid red";
+}
+</script>
+</body>
+</html>

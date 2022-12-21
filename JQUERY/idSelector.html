@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>id selector사용</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph</p>
+<p id="test">This is another paragraph</p>
+
+<button type="button">Click me</button>
+
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#test").hide(); //id셀렉터
+	});
+});
+</script>
+</body>
+</html>

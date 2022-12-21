@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>시간 정보 입력 HTML 폼 요소들</h3>
+초기 세팅 : 2022년 3월 1일 밤 9시 30분 (10분 32)<br/>
+시간을 변경해 보세요
+<hr/>
+
+<form action = "#" method = "get" name = "frm">
+	<pre>
+		month : <input type = "month" value = "2022-03"><br/>
+		<!-- value에 표시는 2022-03, 생기는 창은 년과 월을 선택 가능토록하는 창  -->
+		week : <input type = "week" value = "2022-W09"><br/>
+		<!-- value에 기본값 표시되는 2022-W09로 표시(몇번째 주) 창은 년도와 주를 선택 -->
+		data : <input type = "date" value = "2022-03-01"><br/>
+		<!-- value에 기본값 표시는 2022-03-03로 표시, 창은 , 년,월,일 선택 가능 초기값없으면 
+		아무값도 없고 대신 선택창으로 가면 오늘 날짜 표시-->
+		time : <input type = "time" value="21:30"><br/>
+		<!-- value 기본값은 24시 표시로 21:30 표시 창은 오전 오후로 선택 하도록함-->
+		local : <input type = "datetime-Local"
+			value = "2022-09-01T21:30:10.32"><br/>
+			<!-- value초기값은 "2022-09-01T21:30:10.32"로 시간은 100분의 1초까지 표시 날짜와 시간이이에 T 
+			창은 년월일시간 모두 선택하는 창 -->
+	</pre>
+
+</form> 
+</body>
+</html>

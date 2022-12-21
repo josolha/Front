@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p id="test1">This is a paragraph</p>
+<p id="test2">this is another paragraph</p>
+<p>Input field :<input type="text" id="test3" value="Mickey Mouse"></p>
+<p><a href="https://www.w3schools.com" id="w3s" title="attr변경">www.w3schools.com</a> </p>
+
+<button id="btn1">Set text</button>
+<button id="btn2">Set html</button>
+<button id="btn3">Set value</button>
+<button id="btn4">Set attribute</button>
+<button id="btn5">Set multi attribute</button>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#test1").text("hello world");
+        });
+        $("#btn2").click(function () {
+            $("#test2").html("<b>hello world<b/>");
+        });
+        $("#btn3").click(function () {
+            $("#test3").val("Dolly Duck");
+        });
+        $("#btn4").click(function () {
+            $("#w3s").attr("href","https://www.naver.com");
+            $("#w3s").text("naver.com");
+        });
+        $("#btn5").click(function () {
+            $("#w3s").attr({ //멀티 attr변경시는 {}를 이용한 json 형식 사용, 없으면 새로 만들고 있으면 변경
+                "href" : "https://www.w3schools.com/jquery/",
+                "title" : "W3schools jquery Tutorial"
+            });
+            $("#w3s").text("w3 jquery");
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Animate 효과</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<h3>animation 효과</h3>
+<button id = "btn1">Start Animation</button>
+<button id = "btn2">Start Animation Queue</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+<script> 
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("div").animate({
+      left: '250px',
+      opacity: '0.5', // 기본 1에서 0.5
+      height: '+=150px', // +=은 상대값으로 원래값에 150추
+      width: '+=150px'
+    });
+  });
+  
+  $("#btn2").click(function(){
+	  var div = $("div");
+	  //작성된 순서대로 animate 되는데 이를 Q라 한다.
+	  div.animate({height: '300px', opacity: '0.4'}, "slow");
+	  div.animate({width: '300px', opacity: '0.8'}, "slow");
+	  div.animate({height: '100px', opacity: '0.4'}, "slow");
+	  div.animate({width: '100px', opacity: '0.8'}, "slow");
+	}); 
+});
+</script> 
+</body>
+</html>

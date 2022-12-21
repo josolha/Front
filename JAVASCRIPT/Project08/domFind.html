@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DOM객체 찾기</title>
+</head>
+
+<p>Click the button to change the text of this paragraph.</p>
+<p>This is also a paragraph</p>
+
+<button type ="button" onclick= "myFunction()">버튼</button>
+
+<script>
+function myFunction(){
+	document.getElementsByTagName("p")[0].innerHTML = "Hello World";
+	//document.getElementsByTagName("tagName")은 복수개로 된 콜렉션(배열)을 반환
+}
+</script>
+
+<body>
+
+</body>
+</html>

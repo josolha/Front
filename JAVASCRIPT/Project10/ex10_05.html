@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+<h3>윈도우의 위치와 크기 조절</h3>
+<hr>
+<button onclick="window.moveBy(-10, 0)">left</button> <!-- 수평,수직 -->
+<button onclick="window.moveBy(10, 0)">right</button>
+<button onclick="self.moveBy(0, -10)">up</button>
+<button onclick="moveBy(0, 10)">down</button>
+<button onclick="resizeBy(10, 10)">+</button> <!--크기 조정 수평, 수직 =는 키우고 -는 감 -->
+<button onclick="resizeBy(-10, -10)">-</button>
+
+<!-- window,self는 생략가능 -->
+
+</body>
+</html>

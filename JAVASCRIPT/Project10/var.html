@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>var변수 재정의 </title>
+</head>
+<body>
+
+<h3> var 키워드로 변수 재정의</h3>
+<hr/>
+
+<p id= "demo"></p>
+
+<script>
+var x = 10; // 전역변수
+{
+ 	var x = 2;	//블록 안에 있으나 var로 x로 재정의하였으며 x는 전역변수가 됨
+}
+
+document.getElementById("demo").innterHTML = x;
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+  This is some text in the div.
+  <p>This is a paragraph in the div.</p>
+  <p>This is another paragraph in the div.</p>
+
+</div>
+<h4 class="test">this is p element with class =test </h4>
+<h4 class="test">this is p element with class =test </h4>
+<h4 class="demo">this is p element with class =demo </h4>
+
+<button id="btn1">Remove div element</button>
+<button id="btn2">Empty div element</button>
+<button id="btn3">Filtering div element</button>
+
+<script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("#div1").remove();
+    });
+    $("#btn2").click(function(){
+      $("#div1").empty();
+    });
+    $("#btn3").click(function(){
+      $("h4").remove(".test, .demo");
+    });
+  });
+</script>
+</body>
+</html>

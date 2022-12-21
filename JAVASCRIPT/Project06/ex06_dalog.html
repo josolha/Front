@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>dialog 창들</title>
+</head>
+<body>
+
+<h3> 자바스크립트로 사용자 입력 및 대화</h3>
+<hr/>
+<div> 아래 div에 결과가 출력됩니다.</div>
+<div id = "result"></div>
+
+<script>
+let result = document.getElementById("result");
+//let은 js2015버젼부터 사용하는 변수 선언 키워드로 그전에는 var 
+//document.getElementById("result");는 아이디로 엘리먼트를 객체화 함.
+
+function  promptEx(){
+	
+	let ret = prompt("이름을 입력하세요","josolha");
+	//ret는 입력한 값을 반환()
+	if(ret == null){ //취소나 x버튼 사용
+		result.innerHTML = "취소나 그냥 닫았군요";
+	//innerHTML은 엘리먼트 객체의 내용 부분을 의미
+	}
+	else{
+	    result.innerHTML = ret;
+	}
+}
+
+function confirmEx(){
+	let ret = confirm("전송할까요");
+	
+	if(ret == true){ //확인 버튼을 누름
+		result.innerHTML = "확인을 눌렀군요";
+	}
+	else{ // 취소버틑 누름
+		result.innerHTML = "취소를 눌렀군요";
+	}
+	
+	
+}
+function alertEx(){
+	alert("클릭하셨습니다.");
+}
+
+</script>
+
+<button type="button" onclick="promptEx()">프롬프트 다이얼로그</button>
+<button type="button" onclick="confirmEx()">확인 다이얼로그</button>
+<button type="button" onclick="alertEx()">경고 다이얼로그</button>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내용추가나 엘리먼트 추가</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+
+<img src="https://www.w3schools.com/images/w3jquery.gif" alt="jQuery" width="100" height="140"><br><br>
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+<button id="btn3">Insert before</button>
+<button id="btn4">Insert after</button>
+
+
+<button onclick="appendText()">Append text</button>
+<button onclick="afterText()">after text</button>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("p").append(" <b>Appended text</b>.");
+        });
+
+        $("#btn2").click(function () {
+            $("ol").append("<li>Appended item</li>");
+        });
+        $("#btn3").click(function () {
+            $("img").before("<b>Before</b>");
+        });
+
+        $("#btn4").click(function () {
+            $("img").after("<i>After</i>");
+        });
+    });
+
+    //
+    function appendText() {
+        let txt1 = "<p>Text.</p>"; // html 태그 엘리먼트표현방식으로 dom 객체 만듬
+        let txt2 = $("<p></p>").text("Text."); // jquery의 샐렉터를 html 태그 표현식으로 만듬
+        let txt3 = document.createElement("p");
+        txt3.innerHTML = "Text.";
+        $("body").append(txt1, txt2, txt3);
+    }
+    function afterText(){
+        let txt1 ="<b> I </b>";
+        let txt2 = $("<i></i>").text("love ");
+        let txt3 = document.createElement("b");
+        txt3.innerHTML = "jquery!";
+        $("img").after(txt1,txt2,txt3);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>click event</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<h3>dblclick event 일어나면 사라짐</h3>
+<h3>나도 dblclick event 일어나면 사라짐</h3>
+<h3>dblclick event 나도 역시</h3>
+
+<div id="div1">이곳으로 마우스를 들여오세요</div>
+
+Name: <input type="text" name="fullname"><br/>
+Email: <input type="text" name="email">
+<script>
+$(document).ready(function(){
+  $("p").click(function(){ //click이벤트를 처리하는 메서드는 click(익명의 처리함수)
+    $(this).hide(); //this는 현재의 객체(p중 클릭이벤트가 일어난 객체)
+  });
+  
+  $("h3").dblclick(function(){
+	  $(this).hide(); //dblclick이 일어난 현재 객체
+  });
+  
+  $("#div1").mouseenter(function(){
+	  alert("You entered p1!");
+  });
+  
+  $("#div1").mouseleave(function(){
+	  alert("Bye Bye");
+  });
+  
+  $("input").focus(function(){ //focus이벤트는 입력 가능상태로 될떄(커서가 엘리먼트에 생길시)
+	  $(this).css("background-color", "yellow")
+	  //jquery에서는 css속성 변경이나 값 반환은 css("속성")은 값 반환하고 css("속성","값")은 속성값을 변경
+  });
+  
+  $("input").blur(function(){ //blur이벤트는 입력 가능상태 해제시
+	  $(this).css("background-color", "green")
+	  //jquery에서는 css속성 변경이나 값 반환은 css("속성")은 값 반환하고 css("속성","값")은 속성값을 변경
+  });
+});
+</script>
+</body>
+</html>

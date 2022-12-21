@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>transition CSS 속성을 이용한 애니메이션 효과</title>
+<style>
+span{
+	transition : font-size 5s;
+	/* transition 효과를 span 엘리먼트의 font-size 속성에 대해 5초에 걸쳐줌 */
+}
+span:hover{
+	font-size : 500%; /* hover를 중단하면 역으로 애니메이션 */
+	
+}
+</style>
+</head>
+
+<body>
+
+<h3>font-size에 대한 전환 </h3>
+<hr/>
+<p>
+	<span>꽝!</span> 글자에 마우스를 올려 보세
+</p>
+</body>
+</html>

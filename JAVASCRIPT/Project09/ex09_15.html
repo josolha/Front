@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS CORE객체 Image 사용</title>
+<script>
+//리로딩해줄 8개의 이미지 파일명 배열
+let files = ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+            ];
+let imgs = new Array(); //배열 객체 imgs를 만듬
+
+for(let i =0; i < files.length; i++){
+	imgs[i] = new Image();  // 비어있는 이미지 객체를 imgs배열 원소에 대입
+	imgs[i].src = files[i];
+}
+let next = 1;
+
+function change(img) {
+	img.src = imgs[next].src;
+	next++; //다음 이미지에 대한 인덱스
+	next%= imgs.length; //개수를 넘으면 처음으로 next = next % imgs.length
+}
+</script>
+</head>
+<body>
+
+<h3>new Image()로 이미지 로딩</h3>
+<hr/>
+이미지를 클릭하면 다음 이미지를 보여 줍니다.
+<p></p> <!--줄이 바뀜 <br> 대신으로 사용함 -->
+<img style = "border: 20px ridge wheat;" src="media/Penguins.png" alt = "."
+ 		width="200" height ="200" onclick = "change(this)">
+</body>
+</html>

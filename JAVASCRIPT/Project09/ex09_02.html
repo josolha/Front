@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DOM객체의 이벤트리스너 속성을 사용</title>
+
+<script>
+let p;
+function init(){ //로딩이 완료된 후부터 자바스크립트 코드 실행
+	 p = document.getElementById("p");
+	 p.onmouseover = over; //onmouseover는 DOM 객체의 이벤트 리스너 속성
+	 p.onmouseout = out;
+	 //DOM의 이벤트리스너 속성 값은 익명의 function()을 만들거나 함수 이름을 대입(호출하면 에러) 
+}
+function over(){
+	p.style.backgroundColor = "orchid";
+}
+function out(){
+	p.style.backgroundColor = "white";
+}
+</script>
+
+</head>
+<body onload = "init()">
+<!--onload 이벤트 리스너는 html페이지 로딩이 완료시에 발생하는 이벤트 -->
+
+
+<h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+<hr/>
+<p id = "p">마우스를 올리면 orchid색으로 변경</p>
+</body>
+</html>

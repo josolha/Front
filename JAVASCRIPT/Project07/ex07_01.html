@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS core 객체</title>
+</head>
+<body>
+
+<h3>객체 생성 및 활용</h3>
+<hr/>
+
+<script>
+let today = new Date(); //Date코어객체의 생성자를 이용하여 현재 날짜를 나타내는 Date 객체를 만듬
+// Date 객체가 가지고 있는 메서드나 속성을 사용할 수가 있음 
+// toLocaleString()은 현지시간을 초까지 문자열로 반환
+document.write("현재 시간 :" + today.toLocaleString() + "<br/>");
+
+//String 객체 생성
+let mystr = new String("자바스크립트 학습"); //let mystr ="자바스크립트 학습"이 더 좋은 방식
+document.write("mystr의 내용 : "+ mystr + "<br/>");
+//String 코아 객체가 가지고 있는 속성 length를 사용 (readOnly 속성) 
+document.write("mystr의 길이 : "+ mystr.length + "<br/>");
+</script>
+
+
+
+</body>
+</html>

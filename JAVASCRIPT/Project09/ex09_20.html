@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Key보드 관련 이벤트</title>
+</head>
+<body>
+
+<h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+<hr/>
+
+텍스트 창에 키를 눌러보세요, Alt, Shipt, Ctrl 키도 가능합니다 <br/>
+<input type = "text" id = "text" onkeydown = "whatKeyDown(event)">
+<!-- keydown 이벤트와 keyup이벤트를 주로 사용
+	 키보드를  누룰시 누른 값을 바로바로 표시할시 사용 -->
+
+<div id = "div" style = "background-color : skyblue; width:250px; height: 50px">
+</div>
+
+<script>
+function whatKeyDown(e){ //e는 event 객체를 받는 파라미터 
+	
+	let str = "";
+	let div = document.getElementById("div");
+	div.innerHTML = "";
+	str += "e.key = " + e.key+"<br/>"; // e.key가 누르면 키보드의 문자
+	str += "e.code = " + e.key+"<br/>";
+	div.innerHTML = str;
+}
+</script>
+</body>
+</html>

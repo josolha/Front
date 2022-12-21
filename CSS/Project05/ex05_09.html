@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>css list-style속성</title>
+<style>
+
+#menubar{
+	display : flex;
+	justify-content: center;
+	align-items : center;
+	background : olive;
+}
+#menubar ul{
+	margin : 0;
+	padding : 0;
+	width : 567px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+}
+#menubar ul li{
+	display : inline-block;  /* li는 블록레벨로 새줄에서 시작하는데 이를 새 줄로 넘어가지 않게 inline-block */
+	list-style-type : none;  /* 마커 삭제 */
+	padding : 10px 15px; /* 값이 2개이면 첫번째는 top, bottom, 22번째는 좌,우 값 */
+}
+#menubar ul li a{
+	color : white;
+	text-decoration : none; /* 링크 밑줄 보이지 않게 */
+}
+#menubar ul li a:hover {  /* a에 마우스를 얻는 가상 클래스 상태 */
+	color : violet ; /* 마우스 올라 갈때 색갈 */	
+} 
+
+</style>
+</head>
+<body>
+
+<nav id = "menubar"> <!-- 메뉴를 만드는 시멘틱 태그 -->
+	<ul> <!-- 메뉴 만들시 ul 엘리먼트를 이용 -->
+		<li><a href="#">Home</a></li> <!-- 메뉴 각 항목이고 a는 메뉴 링크 -->
+		<li><a href="#">Espresso</a></li>
+		<li><a href="#">Cappuccino</a></li>
+		<li><a href="#">CafaLatte</a></li>
+		<li><a href="#">F.A.Q</a></li>	
+	</ul>
+	
+</nav>
+
+</body>
+</html>
+

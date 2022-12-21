@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>비트 연산</title>
+<script>
+function  digit8(v){ // 숫자 v를 8비트 2진수로 만드는 함수
+	let str ="";
+	for(let i=0; i<8; i++, v<<=1){
+		if((v & 0x80))
+			str+= "1";
+		else
+			str+="0";
+	}
+	return str;
+	
+}
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

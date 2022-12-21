@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<p><a href="http://www.w3schools.com" id="w3s">w3schools.com</a> </p>
+<button>show href value</button>
+
+<script>
+  $(function(){
+     $('button').click(function(){
+       alert($('#w3s').attr('href'));
+     });
+  });
+</script>
+</body>
+</html>

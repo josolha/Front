@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>focus와 blur 이벤트</title>
+</head>
+
+<body onload = "document.getElementById('name').focus();">
+<!-- id가 name인 엘리멘트에 focus를 줌 -->
+
+<h3>onfocus와 onblur</h3>
+<hr/>
+
+<p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다 </p>
+
+<form>
+	<!-- load가 완료되면 id = "name" 엘리먼트 focus가 주어짐 -->
+	이름 <input type ="text" id ="name" onblur="checkFilled(this)"><br/>
+	학번 <input type = "text">
+</form>
+
+<script>
+function checkFilled(obj){
+	if(obj.value == ""){ //무입력시 focus이동 차단 
+		obj.focus();
+	}
+}
+</script>
+<body>
+
+</body>
+</html>

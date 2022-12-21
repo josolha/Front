@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 변수 선언</title>
+</head>
+<body>
+
+
+<h3>변수 선언, 전역/지역/블록 변수</h3>
+<hr/>
+
+<script>
+let x; // 전역 변수 x 선언, var 선언해도 동일
+function f(){ // 함수 정의(호출시에만 실행)
+	let y; // 함수 f() 내에서만 사용되는 지역 변수 y 선언. var로 선언해도 동일
+	x = 10; //지역 변수 x에 10저장
+	y = 20; //지역 변수 y에 20저장
+	z = 30; // 함수내에서 var이나 let 없이 변수 선언하면 전역변수가 됨
+	if(y == 20){
+		let b = 40; //if 블록에서만 사용되는 블록 변수 b 선언, var로 선언은 불가능 
+		// 블록 변수는 let , const로만 선언 가능 
+		b++;
+		document.write("if 블록 내 블록변수 b =" + b + "<br>");
+	}
+	// 이곳에서는 블록 변수 b에 접근 할 수 없음
+	// 이곳에서는 블록 변수 x,y,z에 모두 접근 가능
+	document.write("함수 f() 내 지역변수 y= " + y + "<br>");
+}
+f(); // 함수 호출
+document.write("전역변수 x = "+ x + "<br>" );
+document.write("전역변수 z = "+ z );
+</script>
+</body>
+</html>

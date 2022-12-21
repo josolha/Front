@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#menubar {
+	display : flex;
+	justify-content: center;
+	align-items : center;
+	
+}
+#menubar ul li{
+	display : inline-block;  /* li는 블록레벨로 새줄에서 시작하는데 이를 새 줄로 넘어가지 않게 inline-block */
+	list-style-type : none;  /* 마커 삭제 */
+	padding : 5px 15px; /* 값이 2개이면 첫번째는 top, bottom, 22번째는 좌,우 값 */
+}
+#menubar ul li a{
+	text-decoration : none;
+}
+</style>
+</head>
+<body>
+<!-- 수평 메뉴로 Home,게시판,회원가입,로그인, -->
+<nav id ="menubar">
+	<ul>
+		<li><a href= "#">Home</a></li>
+		<li><a href= "#">게시판</a></li>
+		<li><a href= "#">회원가입</a></li>
+		<li><a href= "#">로그인</a></li>
+	</ul>
+
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>변수 선언시 let 사용</title>
+</head>
+<body>
+<h3>let를 사용하여 변수 재정의</h3>
+<hr/>
+
+<p id = "demo"><p>
+<script>
+let x = 10; //글로벌 변수
+{
+	let x = 2; //x가 블록 안에서 let로 정의되면 블록 로칼 변수가 됨 
+}
+document.getElementById("demo").innterHTML = x; // 블록 밖에서 사용되므로 글로벌 변수 값
+
+let y =2;
+// ley  y= 5; 글로벌을 재정의는 var과 달리 허용 안됨
+{
+	let y=3; //허용됨
+}
+{
+	let y= 4; //허
+	}
+</script>
+
+</body>
+</html>

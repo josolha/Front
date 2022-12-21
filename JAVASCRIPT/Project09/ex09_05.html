@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>event 객체 전달하기</title>
+</head>
+<body>
+
+<p id="p">마우스를 올려 보세요</p>
+<button type ="button" onclick="f(event)">클릭하세요</button>
+<!-- 시작 태그의 이벤트처리 속성에서 함수 호출시 event를 전달하려면 event 객체를 사용  -->
+<script>
+function f(e){
+	alert(e.type); //이벤트 종류 출력
+}
+document.getElementById("p").onmouseover = f;
+//DOM 객체. 이벤트리스너속성 = 함수이름;
+</script>
+
+</body>
+</html>

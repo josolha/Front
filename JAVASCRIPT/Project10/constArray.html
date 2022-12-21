@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>const를 배열에서 사용</title>
+</head>
+<body>
+
+<h3>const를 이용하여 배열 변수를 만들면 원소 변경이 가능하다</h3>
+<hr/>
+
+<p id= "demo"></p>
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"]; //선언과 동시에 초기와
+//cars = ["kia","hyundai","toyota"]; 는 에러 발생
+cars[0] = "kia"; // 색인번호를 이용하여 원소 변경은 가능
+cars.push("Audi"); //push는 마지막원로 추가
+
+document.getElementById("demo").innerHTML = cars;
+</script>
+</body>
+</html>

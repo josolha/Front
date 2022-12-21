@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이벤트처리 on 메서드 사용</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h3>on이벤트 메서드 사용</h3>
+<hr/>
+<h4>클릭해 주세요</h4>
+<h4>나도 클릭해 주세요</h4>
+<h4>나도 클릭해 주세요</h4>
+
+<h3>하나의 엘리먼트에 여러 이벤트를 처리</h3>
+<hr/>
+<p> Click or move the mouse pointer over this paragraph.<p>
+
+<script>
+$(document).ready(function(){
+	$("h4").on("click",function(){ // 이벤트가 1개일시는 on("이벤트명",처리익명수)
+		$(this).hide();
+	});	
+	$("p").on({
+		mouseenter : function(){
+			$(this).css("background-color", "lightgray");	
+		},
+		mouseleave : function(){
+			$(this).css("background-color", "lightgray");
+		},
+		click : function(){
+			$(this).css("background-color", "yellow");
+		}
+	});
+});
+
+</script>
+
+</body>
+</html>

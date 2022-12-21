@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>const object</title>
+</head>
+<body>
+
+<h3>const변수로 Object를 만들면 속성 변경이 가능하다</h3>
+
+<p id ="demo"></p>
+
+<script>
+const car = {type : "Fiat", model : "500", color : "white"};
+// car = {type : "Fiat", model : "500", color : "white"}; 는 에러 발생
+//속성 변경은 각 속성에 접근하여 변경 
+car.type = "Kia";
+car.color = "blue";
+
+</script>
+
+</body>
+</html>

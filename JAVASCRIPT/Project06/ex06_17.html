@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script>
+function adder(a,b){
+	var sum;
+	sum = a+b;
+	return sum;
+}
+function devider (a,b){
+	var result;
+	result = a / b;
+	return result;
+}
+</script>
+</head>
+
+<body>
+<h3>함수 adder()</h3>
+<hr>
+<div id ="result">answer = </div>
+<script>
+	var n = adder(23456,98374); //함수 호출
+	document.write("23456 + 98374는"+ n + "<br>");
+	
+	/* quiz 
+	함수 이름은 devider, 파라미터는 x,y
+	블록안은 받은 파라미터를 나눈 것을 지역변수 result에 대입
+	result값을 반환 
+
+	호출시 인자값  2500, 50으로 사용해서 호출하고 결과는 res에 대입
+	res을 id="result"인 div 태그 엘리먼트에 출력
+	 */
+	
+	var res = devider(2500,50); //함수 호출
+	var content = document.getElementById("result").innerHTML;
+	document.getElementById("result").innerHTML = content + res;
+	
+</script>
+</body>
+
+</html>

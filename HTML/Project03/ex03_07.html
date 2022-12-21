@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>가보고 싶은 곳</h3>
+<hr/>
+
+<form name = "fo1" id = "fo1" action="#" method = "get" >
+		<!-- input의 list 속성 값과 datalist의 id를 매핑  -->
+		나라 : <input type = "text" name = "country" list = "contries"/>
+			 <datalist id= "contries">
+			 	<option value = "가나"></option>
+			 	<option value = "포루투칼"></option>
+			 	<option value = "우루과이"></option>
+			 </datalist>
+			 
+		보고싶은거 : <input type = "text" name = "wantSee" list = "want"/>
+			 <datalist id= "want">
+	 			<option value = "일본"></option>
+	 			<option value = "싱가폴"></option>
+	 			<option value = "호주"></option>
+	 		</datalist>
+	 		
+	 		<input type= "submit" value="제출"></input>
+</form>
+
+</body>
+</html>

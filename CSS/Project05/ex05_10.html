@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>CSS로 테이블 만들기</title>
+<style>
+table{
+	border : 1px solid black;
+	border-collapse : collapse;
+}
+thead, tfoot{
+	background : #e9e9e9;
+	color : black;
+}
+td,th{
+	height : 20px;
+	width : 100px;
+	text-align : center;
+	padding : 5px;
+}
+th{
+	height : 10px;
+	width : 150px;
+}
+td, tfoot, th{
+	border-bottom : 1px solid gray;
+}
+tbody tr:nth-child(even) {
+	background : aliceblue;
+}
+
+</style>
+</head>
+<body>
+
+<h3>1학기 성적</h3>
+<hr/>
+<!-- table은 새줄에서 시작하나 좌우 100%가 아닌 인라인 형식의 넓이만 차지 -->
+<table >
+
+ 	<thead>
+ 		<tr>
+ 			<!-- th는 주로 구분을 위한 칸으로 굵은 글씨 중앙 정렬 -->
+ 			<th>이름</th>
+ 			<th>HTML</th>
+ 			<th>CSS</th>
+ 		</tr>
+ 	</thead>
+ 	
+ 	<tbody>
+ 		<tr>
+ 			<td>조솔하</td>
+ 			<td>90</td>
+ 			<td>100</td>
+		</tr>
+ 		<tr>
+ 			<td>솔솔하</td>
+ 			<td>80</td>
+ 			<td>70</td>
+		</tr>
+		 		<tr>
+ 			<td>하하하</td>
+ 			<td>50</td>
+ 			<td>60</td>
+		</tr>
+ 		<tr>
+ 			<td>솔하솔</td>
+ 			<td>90</td>
+ 			<td>70</td>
+		</tr>
+ 	</tbody>
+ 	
+ 	<tfoot>
+ 		<tr>
+ 			<th>합</th>
+ 			<th>310</th>
+ 			<th>300</th>
+ 		</tr>
+ 	</tfoot>
+ 	
+</table>
+
+
+<br/>
+
+<h3>Colspan</h3>
+<hr/>
+
+<table style="width:30%">
+ 	<tr>
+ 		<th colspan = "2">Name</th> <!-- 2칸 합하기 -->
+ 		<th>Age</th>
+ 	</tr>
+ 	<tr>
+ 		<td>Jill</td>
+ 		<td>Smith</td>
+ 		<td>43</td>
+ 	</tr>
+ 	<tr>
+ 		<tr>
+ 		<td>Eve</td>
+ 		<td>Jasckson</td>
+ 		<td>57</td>
+ 	</tr>
+
+</table>
+<br/>
+<h3>Rowspan</h3>
+<table style="width:30%">
+	 	<tr>
+ 		<th rowspan = "2">Name</th> <!-- 2칸 합하기 -->
+ 		<th>Age</th>
+ 	</tr>
+ 	<tr>
+ 		<td >Jill</td>
+ 		<td>Smith</td>
+ 		<td>43</td>
+ 	</tr>
+ 	<tr>
+ 		<tr>
+ 		<td>Eve</td>
+ 		<td>Jasckson</td>
+ 		<td>57</td>
+ 	</tr>
+</table>	
+
+</body>
+</html>

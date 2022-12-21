@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML DOM 트리</title>
+</head>
+<body>
+
+<h3>DOM 객체 P의 프로퍼티, 스타일, 이벤트 리스너</h3>
+<hr/>
+
+<p id = "firstP" style ="color:blue; background: yellow;" onclick= "this.style.color = 'teal'">
+	<span style = "color:red">문장입니다.</span>
+</p>
+
+</body>
+
+<script>
+let p = document.getElementById("firstP");
+// HTML DOM객체 p를 변수로 처리 -- 아이디로 DOM 객체를 찾는 메서드 document.getElementById("아이디")
+let text = "p.id = " + p.id + "\n";
+// Dom 객체의 속성(attribute- 시작태그의 속성) 접근은 DOM객체.속성 이름
+text += "p.tageName = " +p.tagName+ "\n";
+// Dom 객체의 태그이름 접근은 Dom 객체.tagName
+text += "p.innerHTML = " + p.innerHTML + "\n";
+// Dom 객체의 내용 속성 접근은 Dom 객체.innerHTML
+text += "p.style.color = " + p.style.color + "\n";
+// Dom 객체의 css 접근은 Dom객체.style.css의 property
+text += "p.onclick = " + p.onclick + "\n";
+// Dom 객체의 이벤트리스너 속성은 Dom객체.이벤트리스너 속성
+// function onclick(event) {this.style.color = 'teal';}
+text += "p.childElementCount = " + p.childElementCount + "\n";
+//childElementCount속성은 Dom객체의 자식 엘리먼트수
+text += "너비 = " + p.offsetWidth + "\n";
+text += "높이 = " + p.offsetHeight + "\n";	
+alert(text);
+</script>
+
+</html>

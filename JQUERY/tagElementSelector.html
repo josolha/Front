@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>태그 엘리먼트 셀렉터</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h3>This is a heading</h3>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button type="button">버튼을 클릭하면 p엘리먼트는 사라집니다</button>
+
+<script>
+//jquery는 $(document).ready(function(){});으로 시작한다
+$(document).ready(function(){
+	//ready이벤트 발생시 처리할 일을 작성
+	$("button").click(function(){ //click이벤트가 button에 발생시
+		$("p").hide(); //hide()는 jquery제공 메서드로 선택괸 엘리먼트를 안보이게 함
+	});
+}); 
+</script>
+</body>
+</html>

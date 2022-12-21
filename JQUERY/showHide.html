@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>나는 "Hide" 버튼을 누르고 사라지고 "show" 버튼을 누르면 나타난다</p>
+
+<button id = "hide">hide</button>
+<button id = "show">Show</button>
+<button id = "toggle">toggle</button>
+
+
+<script>
+$(function(){ // jquery 단축형
+	$("#hide").click(function(){
+		$("p").hide("slow"); // 기본값은 fast
+	});
+	$("#show").click(function(){
+		$("p").show(1000); // 1000밀리세컨드에 걸쳐
+	});
+	$("#toggle").click(function(){
+		$("p").toggle(1000); // 1000밀리세컨드에 걸쳐
+	});
+	
+	
+});
+</script>
+
+</body>
+</html>

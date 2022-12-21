@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>script 태그 내에 자바스크립코드 작성</title>
+<script>
+function over(obj){ 
+	// function은 js에서 함수선언 키워드, 함수 이름(파라미터 이름)으로 자바 처럼
+	//리턴타입, 데이터 타입이 없음 
+	obj.src = "media/banana.png";
+}
+function out(obj){
+	obj.src = "media/apple.png";
+}
+</script>
+</head>
+<body>
+
+<h3>마우스 올려 보세요</h3>
+<hr/>
+
+<img src = "media/apple.png" alt = "이미지" onmouseover = "over(this)" onmouseout= "out(this)"/>
+
+</body>
+
+<!-- 이벤트리스너 속성값으로 자바 스크립트의 함수를 호출(함수이름(파라미터) -->
+</html>
