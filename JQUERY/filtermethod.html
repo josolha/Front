@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to My Homepage</h1>
+
+    <p>This is a paragraph.</p>
+
+    <button id="btn1">first()</button>
+    <button id="btn2">last()</button>
+    <button id="btn3">eq(색인번호)</button>
+    <button id="btn4">filter(selector)</button>
+    <button id="btn5">not(selector)</button>
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in a div.</p>
+      <p>Another paragraph in a div.</p>
+    </div>
+    <br />
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+    </div>
+    <br />
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+    </div>
+
+    <p>My name is Donald (index 0).</p>
+    <p>Donald Duck (index 1).</p>
+    <p class="intro">I live in Duckburg (index 2).</p>
+    <p class="intro">My best friend is Mickey (index 3).</p>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("div").first().css("background-color", "yellow");
+        });
+        $("#btn2").click(function () {
+          $("div").last().css("background-color", "yellow");
+        });
+        $("#btn3").click(function () {
+          $("p").eq(1).css("background-color", "yellow");
+        });
+        $("#btn4").click(function () {
+          $("p").filter("p.intro").css("background-color", "yellow");
+        });
+        $("#btn5").click(function () {
+          $("p").not("p.intro").css("background-color", "yellow");
+        });
+      });
+    </script>
+  </body>
+</html>
