@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>트레버싱(상호관계를 이용한 엘리먼트 선택)</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgray;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">parent</button>
+    <button id="btn2">parents</button>
+    <button id="btn3">parents중 필터링해서 선택</button>
+    <button id="btn4">parentsUntil로 구간 선택(파라미터는 제외)</button>
+
+    <div class="ancestors">
+      <div style="width: 500px">
+        div (great-grandparent)
+        <ul>
+          ul(grandparent)
+          <li>
+            li(direct parent)
+            <span>span(자신)</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="width: 500px">
+        div (great-grandparent)
+        <p>
+          p(direct parent)
+          <span>span(자신)</span>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("span").parent().css({
+            color: "red",
+            border: "2px solid red",
+          });
+        });
+        $("#btn2").click(function () {
+          $("span").parents().css({
+            color: "red",
+            border: "2px solid red",
+          });
+        });
+        $("#btn3").click(function () {
+          $("span").parents("ul").css({
+            //조상중 ul만 선택
+            color: "red",
+            border: "2px solid red",
+          });
+        });
+        $("#btn4").click(function () {
+          $("span").parentsUntil("div").css({
+            //조상중 ul만 선택
+            color: "red",
+            border: "2px solid red",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

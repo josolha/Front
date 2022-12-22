@@ -28,6 +28,9 @@
             alert("Background color =  "+ $("p").css("background-color"));
             //맨처음 일치하는 것의 속성을 가져옴
             //출력은 rgb(255,0,0)
+            $("p").each(function(index,item){
+                $(item).css("background-color","red");
+            })
         });
 
         $("#btn2").click(function(){

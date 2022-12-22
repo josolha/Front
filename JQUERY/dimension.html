@@ -25,9 +25,31 @@
 </head>
 <body>
 <div id="div1"></div>
-<button>Display dimensions of div</button>
+<button id="btn1">Display dimensions of div(content)</button>
+<button id="btn2">Display dimensions of div(padding포함)</button>
+<br>
 
 <p>width() - returns the width of an element.</p>
 <p>height() - returns the height of an element.</p>  
+
+<script>
+$(document).ready(function(){
+    
+  $("#btn1").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>"; // content의 width를 반환
+    txt += "Height of div: " + $("#div1").height(); //content의 height를 반환
+    $("#div1").html(txt);
+  });
+
+  $("#btn2").click(function(){
+    var txt = "";
+    txt += "innerWidth of div: " + $("#div1").innerWidth() + "</br>"; // content의 width를 반환
+    txt += "innerHeight of div: " + $("#div1").innerHeight(); //content의 height를 반환
+    $("#div1").html(txt);
+  });
+
+});
+</script>
 </body>
 </html>
