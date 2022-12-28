@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Card 클래스 사용</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <base href="https://www.w3schools.com/bootstrap4/" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>card클래스를 사용하여 이미지가 위에 있는 명함 스타일 만들기</h3>
+
+      <div class="card" style="width: 400px">
+        <img
+          class="card-img-top"
+          src="img_avatar1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">solha jo</h4>
+          <p class="card-text">자바를 자바바~</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div class="container">
+      <h3>card클래스를 사용하여 이미지가 아래 있는 명함 스타일 만들기</h3>
+
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">solha jo</h4>
+          <p class="card-text">자바를 자바바~</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="img_avatar1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>
+        card클래스를 사용하여 이미지가 아래에 있고 카드전체에 링크 추가는
+        stretched-link 클래스 사용
+      </h3>
+
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <h4 class="card-title">solha jo</h4>
+          <p class="card-text">자바를 자바바~</p>
+          <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="img_avatar1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>
+        card 클래스를 사용하여 사진과 내용을 중첩시는 card-body 클래스를
+        card-img-overlay클래스로 변경
+      </h3>
+
+      <div class="card" style="width: 400px">
+        <div class="card-img-overlay">
+          <h4 class="card-title">solha jo</h4>
+          <p class="card-text">자바를 자바바~</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+        <img
+          class="card-img-bottom"
+          src="img_avatar1.png"
+          alt="Card image"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>여러개의 카드를 격자(바둑판)형식으로 배치</h3>
+
+      <div class="card-columns">
+        <!-- 이안에 card를 여러개 배치 -->
+        <div class="card bg-primary">  <!-- card1-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the first card</p>
+          </div>
+        </div>
+        <div class="card bg-warning"> <!-- card2-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the second card</p>
+          </div>
+        </div>
+        <div class="card bg-success"> <!-- card3-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the third card</p>
+          </div>
+        </div>
+        <div class="card bg-danger"> <!-- card4-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the fourth card</p>
+          </div>
+        </div>
+        <div class="card bg-light"> <!-- card5-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the fifth card</p>
+          </div>
+        </div>
+        <div class="card bg-info"> <!-- card6-->
+          <div class="card-body text-center">
+            <p class="card-text">Some text inside the sixth card</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="container">
+        <h3>card-deck은 카드의 내용에 블록하고 높이가 모두 동일 (가장 큰 높이를 기준)</h3>
+        <div class="card-deck">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the first card</p>
+                <p class="card-text">Some more text to increase the height</p>
+                <p class="card-text">Some more text to increase the height</p>
+                <p class="card-text">Some more text to increase the height</p>
+              </div>
+            </div>
+            <div class="card bg-warning">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the second card</p>
+              </div>
+            </div>
+            <div class="card bg-success">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the third card</p>
+              </div>
+            </div>
+            <div class="card bg-danger">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the fourth card</p>
+              </div>
+            </div>  
+          </div>
+    </div>
+
+    <div class="container">
+        <h3>card-group은 카드의 내용에 블록하고 높이가 모두 동일 (가장 큰 높이를 기준)</h3>
+        <div class="card-group">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the first card</p>
+                <p class="card-text">Some more text to increase the height</p>
+                <p class="card-text">Some more text to increase the height</p>
+                <p class="card-text">Some more text to increase the height</p>
+              </div>
+            </div>
+            <div class="card bg-warning">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the second card</p>
+              </div>
+            </div>
+            <div class="card bg-success">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the third card</p>
+              </div>
+            </div>
+            <div class="card bg-danger">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the fourth card</p>
+              </div>
+            </div>  
+          </div>
+    </div>
+  </body>
+</html>
