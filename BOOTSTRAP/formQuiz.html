@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- 회원가입창
+    1.이름
+    2.생년월일
+    3.주소
+    4.id
+    5.비번
+    6.취미(독서,쇼핑,조깅,먹기) --체크박스 
+    7.최고학력(고졸,대졸,대학원) -- 라디오
+    8.자기소개 (textarea) 
+    9.확인
+    10.취소
+
+    grid를 적용해서 한줄에 2개 콘트롤
+
+    제일 위에 홈 쇼핑 코너 알림(알림은 드롭다운으로 게시판, 공지사항, Q&A) 가입, 로그인 -메뉴창
+    -->
+
+    <nav class="navbar bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Home Shopping</a>
+      <!-- 컬랩스용(메뉴 감추고 보여주는 버튼) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+        <!-- 상병계급장 아이콘 -->
+      </button>
+      <!-- 컬랩스 대상 엘리먼트는 ul의 컨테이너로 만듬 -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <!-- dropdown메뉴 항목 -->
+          <li class="nav-item dropdown">
+            <!-- 드롭다운용 버튼 -->
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbardrop"
+              data-toggle="dropdown"
+            >
+              Alert
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">게시판</a>
+              <a class="dropdown-item" href="#">공지사항</a>
+              <a class="dropdown-item" href="#">Q&A</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+
+    <div class="container">
+      <h3>회원가입창</h3>
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+        </div>
+
+      </form>
+      <br/>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+          </div>
+        </form>
+    </div>
+    <br/>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+        </div>
+      </form>
+  </div>
+  <br/>
+  <div class="container">
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+          />
+        </div>
+      </div>
+    </form>
+</div>
+  </body>
+</html>
