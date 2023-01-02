@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h2>HTML에서 제공하는 from의 요소인 control의 변경</h2>
+      <!-- 기본형과 비교하면 체크박스 아이콘이 조금 더크고 테두리가 희미 -->
+      <form action="/action_page.php">
+        <div class="custom-control custom-checkbox mb-3">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="customCheck"
+            name="example1"
+          />
+          <label class="custom-control-label" for="customCheck"
+            >Custom checkbox</label
+          >
+        </div>
+        <!-- 기본형 -->
+        <input type="checkbox" id="defaultCheck" name="example2" />
+        <label for="defaultCheck">Default checkbox</label>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>기본형에 없는 switch</h2>
+
+      <form action="/action_page.php">
+        <div class="custom-control custom-switch">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="switch1"
+            name="example"
+          />
+          <label class="custom-control-label" for="switch1">Toggle me</label>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class="container mt-3">
+      <h2>Inline Custom Form Controls</h2>
+
+      <form action="/action_page.php">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input"
+            id="customRadio1"
+            name="example1"
+          />
+          <label class="custom-control-label" for="customRadio1"
+            >Custom radio</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input"
+            id="customRadio2"
+            name="example2"
+          />
+          <label class="custom-control-label" for="customRadio2"
+            >Custom radio</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
