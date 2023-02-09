@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label>
+        <input type="checkbox" name="chk_lang" value="html" />HTML
+      </label>
+      <label>
+        <input type="checkbox" name="chk_lang" value="java" />JAVA
+      </label>
+      <label>
+        <input type="checkbox" name="chk_lang" value="spring" />Spring
+      </label>
+      <label>
+        <input type="checkbox" name="chk_lang" value="javaScript" />JavaScript
+      </label>
+    </div>
+    <button onclick="doSave()">Save</button>
+    <table border="1">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="chkall" onclick="checkAll()" /></th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="chk" value="0" /></td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="chk" value="1" /></td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="chk" value="2" /></td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="chk" value="3" /></td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      function doSave() {
+        // name 속성의 값이 'chk_lang'인 요소들을 찾아서 배열로 리턴
+        let chk_langs = document.getElementsByName("chk_lang");
+        console.log(chk_langs.length);
+        // 체크된 요소를 담기위한 배열 선언
+        let checked_elem = [];
+
+        for (let i = 0; i < chk_langs.length; i++) {
+          // chk_langs[i].checked : input 이 체크가되면 true, 아니면 false
+          if (chk_langs[i].checked) {
+            // 체크된 값을 배열에 저장
+            checked_elem.push(chk_langs[i].value);
+          }
+        }
+        console.log(checked_elem);
+
+        console.log("~~~~~~~~~~~~~");
+        let chks = document.getElementsByName("chk");
+        // console.log(chks.length);
+        // 체크된 요소를 담기위한 배열 선언
+        let checked_row = [];
+
+        for (let i = 0; i < chks.length; i++) {
+          if (chks[i].checked) {
+            // 체크된 값을 배열에 저장
+            checked_row.push(chks[i].value);
+          }
+        }
+        console.log(checked_row);
+      }
+
+      function checkAll() {
+        // isChecked는 true, false 값을 갖는다.
+        let isChecked = document.getElementById("chkall").checked;
+
+        let chks = document.getElementsByName("chk");
+        for (let i = 0; chks.length; i++) {
+          chks[i].checked = isChecked;
+        }
+      }
+    </script>
+  </body>
+</html>
