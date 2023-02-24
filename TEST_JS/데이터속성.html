@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- MS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <span id="test" data-num="001" data-code="s01"
+      >html표준 data 속성 사용하기</span
+    >
+
+    <script>
+      var sp = document.querySelector("#test");
+
+      // data- 속성의 값은 DOMStringMap에 저장되는데
+      // DOMStringMap에 값은 dataset을 통해서 가져올 수 있다.
+      console.log(sp.dataset);
+
+      // data 속성값 가져오기
+      console.log(sp.dataset.num);
+      console.log(sp.dataset.code);
+
+      console.log(sp.dataset["num"]);
+      console.log(sp.dataset["code"]);
+
+      //data- 속성값 변경하기
+      sp.dataset.num = "2000";
+      console.log(sp.dataset.num);
+
+      sp.dataset.code = "2000";
+      console.log(sp.dataset.code);
+
+      //jQuery에서는 data()함수를 사용
+      var code = $("span").data("code");
+      console.log("data-code :" + code);
+
+      //data-address에 값 저장
+      $("span").data("address", "강서구 화곡");
+      console.log($("span").data("address"));
+
+      //data-info에 여러개의 값을 저장 (data-info-name, data-info-gender)
+      $("span").data("info", { name: "김말똥", gender: "남" });
+
+      //data-info에 값 가져오기
+      console.log($("span").data("info"));
+      console.log($("span").data("info").name);
+      console.log($("span").data("info").gender);
+    </script>
+  </body>
+</html>
