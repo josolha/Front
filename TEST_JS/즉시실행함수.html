@@ -1,0 +1,97 @@
+<script>
+  //즉시실행함수(IIFE : Immediately Invoked Funtion Expression)
+  //함수 정의와 동시에 즉시 호출되는 함수를 즉시실행함수
+  //즉시실행함수는 단 한번만 호출된다, 다시 호출할 수 없다.
+
+  //패턴
+  (function () {
+    //코드....
+  })();
+
+  (function () {
+    //코드....
+  })();
+
+  (function () {
+    console.log("즉시 실행 함수...");
+  })();
+
+  (function () {
+    console.log("익명 즉시 실행 함수...");
+  })();
+
+  (function aaa() {
+    console.log("기명 즉시 실행 함수...");
+  })();
+
+  //  한번실행 되면 메모리에서 사라짐 , 일회용 함수
+  //  따라서 재호출하면 참조 오류 발생
+  //   aaa(); // 참조오류 발생
+
+  (my = function (x) {
+    console.log("예> : " + x * x);
+  })(2);
+
+  my(3);
+
+  // 변수에 즉시 실행 함수를 저장
+  var my2 = (function (x) {
+    return x * x;
+  })(4);
+
+  console.log("my2 :" + my2);
+
+  var app = (function () {
+    //private
+    var str = "하이";
+    var intVal = 1000;
+
+    //public
+    return {
+      proStr: str,
+      proInt: intVal,
+    };
+  })();
+
+  //   console.log(app.str); //외부에서 접근 안됨
+  console.log(app.proStr); //외부에서 접근 안됨
+  //   console.log(app.intVal);
+  console.log(app.proInt);
+
+  ////////////////////모듈화 패턴
+  var member = (function () {
+    var name = "홍";
+    var age = "22";
+    var addr = "강남";
+
+    var salary = 2000;
+    var tax = 100;
+    var email = "test@gamil.com";
+    var tel = 010 - 1212 - 1212;
+
+    //private 메소드
+    var method = function () {
+      paySalary = salary - tax;
+      return paySalary;
+    };
+
+    var memInfo = function () {
+      return name + "," + addr;
+    };
+
+    return {
+      name: name,
+      tax: tax,
+      email: email,
+      method: method,
+      method1: memInfo,
+    };
+  })();
+
+  console.log(member.name);
+  console.log(member.email);
+  console.log(member.tax);
+
+  console.log(member.method());
+  console.log(member.method1());
+</script>
